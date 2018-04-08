@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box; }
+
+body {
+
+  font-family: sans-serif;
+}
+ 
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+  
+div[class^="col-"] {
+  padding: 1rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+$map: (lg:1500, md:1290, sm:992, xs:766, xxs:520, xxxs:335);
+  @each $key, $val in $map {
+      @media all and (max-width: $val + px) {
+
+        $columns: 16;
+        @for $i from 0 through $columns {
+          .col-#{$key}-#{$i} {
+            flex: 0 0 100% / $columns * $i;
+          }
+          .col-offset-#{$key}-#{$i}{
+            margin-left: 100% / $columns * $i;
+          }
+        }
+      }
+  }
+
+  @media all and (min-width: 1501px) {
+
+    $columns: 16;
+    @for $i from 1 through $columns {
+      .col-xlg-#{$i} {
+        flex: 0 0 100% / $columns * $i;
+      }
+      .col-offset-xlg-#{$i}{
+        margin-left: 100% / $columns * $i;
+      }
+    }
+  }
