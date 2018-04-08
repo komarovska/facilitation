@@ -220,7 +220,7 @@ a {
 
 @media all and (max-width: 580px) {
   .container-team {
-    height: 150vh;
+    height: 170vh;
   }
 }
 
@@ -236,7 +236,7 @@ a {
 
 @media all and (max-width: 580px) {
   .bridge {
-    height: 20%;
+    height: 10%;
   }
 }
 
@@ -294,7 +294,7 @@ a {
 
 @media all and (max-width: 580px) {
   .team__members__pics {
-    height: 75%;
+    height: 80%;
   }
 }
 

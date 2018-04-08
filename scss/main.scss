@@ -196,7 +196,7 @@ a {
     position: relative;
     overflow: hidden;
     @media#{$xxs} {
-        height: 150vh;
+        height: 170vh;
     }
     @media#{$xxxs} {
         height: 220vh;
@@ -206,7 +206,7 @@ a {
 .bridge {
     height: 30%;
     @media#{$xxs} {
-        height: 20%;
+        height: 10%;
     }
     @media#{$sm} {
         height: 25%;
@@ -247,7 +247,7 @@ a {
         height: 60%;
         overflow: hidden;
         @media#{$xxs} {
-            height: 75%;
+            height: 80%;
         }
         @media#{$sm} {
             height: 65%;
