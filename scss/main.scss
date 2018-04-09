@@ -22,8 +22,12 @@ $md: "all and (max-width: 1290px)";
 $lg: "all and (max-width: 1500px)";
 $xlg: "all and (min-width: 1501px)";
 
-$xxxs_: "(max-width: 335px) and (orientation: landscape)";
-$xxs_: "(max-width: 580px) and (orientation: landscape)";
+$xxxs_: "all and (max-width: 335px) and (orientation: landscape)";
+$xxs_: "all and (min-width: 336px) and (max-width: 580px) and (orientation: landscape)";
+$xs_: "all and (min-width: 581px) and (max-width: 766px) and (orientation: landscape)";
+$sm_: "all and (min-width: 767px) and (max-width: 992px) and (orientation: portrait)";
+$md_: "all and (min-width: 993px) and (max-width: 1290px) and (orientation: portrait)";
+
 
 html {
     @media#{$xlg} {
@@ -57,10 +61,15 @@ a {
     height: 70vh;
     /*background-image: url(../img/layer5.png)*/
     background-repeat: no-repeat; 
-    /*background-image: url(../img/backgr.jpg);*/
+    background-image: url(../img/background2.png);
     background-repeat: no-repeat;
     background-size: contain;
-   
+    @media#{$md_} {
+        height: 50vh;
+    }
+    @media#{$xxs_} {
+       
+    }
 }
 
 .nav-menu {
@@ -68,7 +77,10 @@ a {
     background-color: $darkbrown;
     color: white;
     font-family: $font_two;
-    @media#{$xxs_} {
+    @media#{$md_} {
+        height: 15%;
+    }
+    @media#{$xs_} {
         height: 25%;
     }
     &__title {
@@ -87,11 +99,15 @@ a {
         height: 80%;
         & > div {
             margin-top: 25px;
+            @media#{$md} {
+                margin-top: 35px;
+            }
             @media#{$sm} {
                 margin-top: 35px;
             }
-            @media#{$md} {
-                margin-top: 35px;
+            
+            @media#{$xs_} {
+                margin-top: 25px;
             }
             }
         & > div:hover {
@@ -132,6 +148,9 @@ a {
             display: flex;
             flex-direction: column;
             color: white;
+            @media#{$xxs_} {
+                
+            }
             &__item {
                 display: none;
                 height: 25%;
@@ -142,7 +161,11 @@ a {
                 font-family: 'PT Sans', sans-serif;
                 padding-top: 25px;
                 border: 2px solid $lightbrown;
-                
+                @media#{$xxs_} {
+                   font-size: 2.5rem;
+                   padding-top: 10px;
+                   height: 22%;
+                }
             }
             & > div {
                 background-color: $mudbrown;
@@ -171,11 +194,20 @@ a {
         padding-top: 15%;
         font-family: $font_two;
         font-weight: bold;
+        @media#{$xs_} {
+            padding-top: 5%;
+            font-size: 5rem;
+        }
+        @media#{$xxs_} {
+            padding-top: 5%;
+            font-size: 4.5rem;
+        }
         @media#{$xxs} {
             padding-top: 30%;
         }
         @media#{$xxxs} {
             padding-top: 5%;
+            font-size: 5rem;
         }
         
         & > span {
@@ -195,25 +227,44 @@ a {
     background-color: $lightgrey;
     position: relative;
     overflow: hidden;
-    @media#{$xxs} {
-        height: 170vh;
+    @media#{$md_} {
+        height: 50vh;
     }
+    @media#{$sm} {
+        height: 150vh;
+    }
+    @media#{$xs_} {
+        height: 180vh;
+    }
+    @media#{$xxs} {
+        height: 190vh;
+    }
+    @media#{$xxs_} {
+        height: 350vh;
+    }
+    
     @media#{$xxxs} {
-        height: 220vh;
+        height: 230vh;
     }
 }
 
 .bridge {
     height: 30%;
-    @media#{$xxs} {
-        height: 10%;
-    }
     @media#{$sm} {
         height: 25%;
+        
+    }
+    @media#{$xxs} {
+        height: 20%;
+        
+    }
+    @media#{$xxs_} {
+        height: 17%;
     }
     @media#{$xxxs} {
-        height: 22%;
+        height:20%;
     }
+    
     &__phrase {
         text-align: center;
         padding-top: 4vh;
@@ -246,15 +297,19 @@ a {
     &__pics {
         height: 60%;
         overflow: hidden;
-        @media#{$xxs} {
-            height: 80%;
-        }
         @media#{$sm} {
             height: 65%;
         }
-        @media#{$xxxs} {
-            height: 70%;
+        @media#{$xxs} {
+            height: 72%;
         }
+        @media#{$xxs_} {
+            height: 75%;
+        }
+        @media#{$xxxs} {
+            height: 74%;
+        }
+        
     &__icon {
         margin-left: 35%;
     }
@@ -273,12 +328,13 @@ a {
   font-weight: 700;
   border-radius: 100px;
   color: $mudbrown;
+  @media#{$sm} {
+    font-size: 2rem;
+}
   @media#{$xxs} {
     font-size: 2rem;
 }
-    @media#{$sm} {
-    font-size: 2rem;
-}
+    
     margin: 0 auto;
     &:hover {
         background-color: $darkbrown;
@@ -290,11 +346,11 @@ a {
         padding: 20px;
         font-family: 'PT Sans', sans-serif;
         color: $mudbrown;
-        @media#{$xxs} {
-            font-size: 3rem;
-        }
         @media#{$sm} {
             font-size: 3.5rem;
+        }
+        @media#{$xxs} {
+            font-size: 3rem;
         }
     }
     &_background {
@@ -349,7 +405,7 @@ a {
             text-align: left;
             padding: 5%;
             color: $darkbrown;
-           
+            overflow: hidden;
         }
         &__description {
         height: 15%;
@@ -359,11 +415,11 @@ a {
         text-align: center;
         color: $mudbrown;
         font-family: 'PT Sans', sans-serif;
-        @media#{$xxs} {
-            font-size: 4rem;
-        }
         @media#{$sm} {
             font-size: 4.5rem;
+        }
+        @media#{$xxs} {
+            font-size: 4rem;
         }
         
     }
@@ -374,12 +430,21 @@ a {
 .container-services {
     background-color: #e0dfde;
     height: 100vh;
+    @media#{$sm} {
+        height: 150vh;
+    }
+    @media#{$xs_} {
+        height: 190vh;
+    }
     @media#{$xxs} {
         height: 220vh;
     }
+    @media#{$xxs_} {
+        height: 400vh;
+    }
     @media#{$xxxs} {
         height: 260vh;
-    }
+    } 
 }
 
 .services__title {
@@ -424,12 +489,16 @@ a {
             font-size: 3rem;
             padding-bottom: 10px;
             font-family: 'PT Sans', sans-serif;
-            @media#{$xxs} {
-                font-size: 4.5rem;
+            @media#{$md_} {
+                font-size: 4rem;
             }
             @media#{$sm} {
                 font-size: 4rem;
             }
+            @media#{$xxs} {
+                font-size: 4.5rem;
+            }
+            
         }
         &__btn {
             height: 10%;
@@ -442,6 +511,14 @@ a {
             text-align: center;
             padding-top: 10px;
             font-family: 'PT Sans', sans-serif;
+            @media#{$md_} {
+                font-size: 3rem;
+                width: 55%;
+            }
+            @media#{$sm} {
+                font-size: 3rem;
+                width: 55%;
+            }
             @media#{$xxs} {
                 font-size: 3.5rem;
                 height: 12%;
@@ -451,10 +528,8 @@ a {
             @media#{$xxxs} {
                 font-size: 3rem;
             }
-            @media#{$sm} {
-                font-size: 3rem;
-                width: 55%;
-            }
+           
+            
             &:hover {
                 background-color: $bordo;
                 color: $lightgrey
@@ -465,12 +540,17 @@ a {
             padding: 10px;
             text-indent: 20px;
             font-family: 'PT Sans', sans-serif;
-            @media#{$xxs} {
+            @media#{$md_} {
                 font-size: 3rem;
             }
             @media#{$sm} {
                 font-size: 2.5rem;
             }
+            @media#{$xxs} {
+                font-size: 3rem;
+            }
+           
+            
         }
         
     }
@@ -550,9 +630,16 @@ a {
     margin: auto;
     background-color: $mudbrown;
     height: 33vh;
+    @media#{$sm} {
+        height: 50vh;
+    }
+    @media#{$xs_} {
+        height: 66vh;
+    }
     @media#{$xxs} {
         height: 66vh;
     }
+   
   }
   
 .clients {
@@ -605,9 +692,13 @@ a {
     left: 15%;
     width: 70%;
     text-align: center;
-    @media#{$xxxs} {
-        top: 5%;
-        font-size: 2.5rem;
+    @media#{$md_} {
+        font-size: 3rem;
+        top: 20%;
+    }
+    @media#{$sm} {
+        top: 15%;
+        font-size: 3rem;
         left: 10%;
         width: 80%;
     }
@@ -617,25 +708,39 @@ a {
         left: 10%;
         width: 80%;
     }
-    @media#{$sm} {
+    @media#{$xxs_} {
+        font-size: 2.5rem;
         top: 15%;
-        font-size: 3rem;
+    }
+    @media#{$xxxs} {
+        top: 10%;
+        font-size: 2.5rem;
         left: 10%;
         width: 80%;
     }
+    
+    
+    
     &_small {
-        @media#{$xxs} {
+        @media#{$md_} {
             top: 30%;
         }
         @media#{$sm} {
             top: 30%;
         }
+        @media#{$xxs} {
+            top: 30%;
+        }
+        
     }
     &_medium {
-        @media#{$xxs} {
-            top: 20%;
+        @media#{$md_} {
+            top: 25%;
         }
         @media#{$sm} {
+            top: 20%;
+        }
+        @media#{$xxs} {
             top: 20%;
         }
     }
@@ -677,15 +782,25 @@ a {
     margin: auto;
     background-color: $lightgrey;
     height: 75vh;
-    @media#{$xxxs} {
-        height: 120vh;
+    @media#{$md_} {
+        height: 60vh;
+    }
+    @media#{$sm} {
+        height: 70vh;
+    }
+    @media#{$xs_} {
+        height: 140vh;
     }
     @media#{$xxs} {
         height: 100vh;
     }
-    @media#{$sm} {
-        height: 65vh;
+    @media#{$xxs_} {
+        height: 150vh;
     }
+    @media#{$xxxs} {
+        height: 137vh;
+    }
+    
   }
   
 .form-inner {
@@ -695,25 +810,33 @@ a {
         color: $lightbrown; 
         margin-top: 30px;
         line-height: 2;
-        @media#{$xxs} {
-            font-size: 3rem;
+        @media#{$md_} {
+            font-size: 4rem;
         }
         @media#{$sm} {
             font-size: 3rem;
         }
+        
         & > div {
             width: 100%;
             padding-left: 45%;
             padding-top: 15px; 
-            @media#{$xxs} {
-                padding-left: 30%;
-            } 
-            @media#{$xxxs} {
-                padding-left: 25%;
+            @media#{$md_} {
+                padding-left: 35%;
             }
             @media#{$sm} {
                 padding-left: 35%;
             }
+            @media#{$xxs} {
+                padding-left: 30%;
+            } 
+            @media#{$xxs_} {
+                padding-left: 40%;
+            }
+            @media#{$xxxs} {
+                padding-left: 25%;
+            }
+           
         }
     }
     &__title {
@@ -740,12 +863,16 @@ a {
         font-size: 2rem;
         padding: 10px 20px;
         color: $lightgrey;
-        @media#{$xxs} {
-            font-size: 3rem;
+        @media#{$md_} {
+            font-size: 3.5rem;
         }
         @media#{$sm} {
             font-size: 3rem;
         }
+        @media#{$xxs} {
+            font-size: 3rem;
+        }
+        
         &:hover {
             background-color: $mudbrown;
         }
