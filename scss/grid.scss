@@ -22,7 +22,7 @@ div[class^="col-"] {
 
 
 
-$map: (lg:1500, md:1290, sm:992, xs:766, xxs:520, xxxs:335);
+$map: (lg:1500, md:1290, sm:992, xs:766, xxs:580, xxxs:335);
   @each $key, $val in $map {
       @media all and (max-width: $val + px) {
 
