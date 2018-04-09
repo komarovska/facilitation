@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Our Start-Up</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -24,12 +25,12 @@
         <div><a href='#section3'>Отзывы</a></div>
         <div><a href='#section4'>Контакты</a></div>
     </div>
-    <div id='small-shown' onclick='menuDrop()' onmouseover="linesRearrange()" onmouseout="linesReset()" class='nav-menu__items-small col-offset-xs-7 col-offset-xxs-13 col-offset-xxxs-12 col-xs-1'>
+    <div id='small-shown' onclick='menuDrop(); linesRearrange()'  onmouseover="linesRearrange()" onmouseout="linesReset()" class='nav-menu__items-small col-offset-xs-13 col-offset-xxs-13 col-offset-xxxs-12 col-xs-1'>
         <div id="line1" class='nav-menu__items-small__line'></div>
         <div class='nav-menu__items-small__line'></div>
         <div id='line3' class='nav-menu__items-small__line'></div>
     </div>
-    <div onclick='menuHide()' onmouseover="linesRearrange()" onmouseout="linesReset()" id='small-hidden' class='nav-menu__items-small col-offset-xs-7 col-offset-xxs-13 col-offset-xxxs-12 col-xs-1'>
+    <div onclick='linesReset(); menuHide()' onmouseover="linesRearrange()" onclick='linesReset()' onmouseout="linesReset()" id='small-hidden' class='nav-menu__items-small col-offset-xs-13 col-offset-xxs-13 col-offset-xxxs-12 col-xs-1'>
             <div id='line4' class='nav-menu__items-small__line'></div>
             <div class='nav-menu__items-small__line'></div>
             <div id='line5'
@@ -38,10 +39,10 @@
 
 </div>
 <div  id='hidden-menu' class='row nav-menu_small'>
-        <div id='item1' class='nav-menu_small__item'>О нас</div>
-        <div id='item2' class='nav-menu_small__item'>Услуги</div>
-        <div id='item3' class='nav-menu_small__item'>Отзывы</div>
-        <div id='item4' class='nav-menu_small__item'>Контакты</div>
+        <div id='item1' class='nav-menu_small__item'><a href='#section1'>О нас</a></div>
+        <div id='item2' class='nav-menu_small__item'><a href="#section2">Услуги</a></div>
+        <div id='item3' class='nav-menu_small__item'><a href='#section3'>Отзывы</a></div>
+        <div id='item4' class='nav-menu_small__item'><a href='#section4'>Контакты</a></div>
 </div>
 <div class='row opening-page'>
     <div class='col-offset-xlg-2 col-xlg-6 col-offset-lg-2 col-lg-6 col-offset-md-1 col-md-9'>
@@ -53,7 +54,7 @@
 
 <div id='section1' class='container container-team'>
     <div class='row bridge'>
-            <div class='bridge__phrase col-offset-xlg-5 col-xlg-6 col-offset-lg-5 col-lg-6 col-offset-sm-4 col-sm-8'>
+            <div class='bridge__phrase col-offset-xlg-5 col-xlg-6 col-offset-lg-5 col-lg-6 col-offset-sm-4 col-sm-8 col-offset-xs-3 col-xs-10'>
                 <h1>Наша команда</h1>
                 <div></div>
                 <p>
@@ -73,7 +74,7 @@
     <div onclick='revealInfo()' onmouseout='hideInfo()'  id='revealBtn' class='team__members__pics__btn'>Узнать больше</div>
     </div>
     <div id='overlay' class='team__members__pics__overlay'> 
-            Oбучение: «Управление персоналом КЦ. Система качества» («Апекс-Берг Контакт-центр консалтинг», 2012 год); «Оценка при подборе персонала» и «Основы менеджмента:  управление по целям» (Мейнстрим, 2007-2008 год); «Мастерство презентаций и публичных выступлений», «Управление людьми и мотивация», «Методы активных продаж» (InforManager, 2008 год); «Личная эффективность руководителя», «Обратная связь и мотивация персонала» (Smart Time, 2012-2013 год); «Языковые конструкции при продаже товаров и услуг» (Азимов, 2013 год); «Методы партисипативной фасилитации «(Карпова Н., 2015 год), «Повышение эффективности  отдела продаж» (Афанасьев, 2015 р.); «Стратегия голубых океанов» (2016 г.), «Визуализация в как инструмент повышения личной эффективности» (Приходько, 2017 г.), «Эмоциональный интеллект руководителя» (Н. Романенко, 2017 г.). </div>
+        Образование и пройденное обучение: «Управление персоналом КЦ. Система качества» («Апекс-Берг Контакт-центр консалтинг», 2012 год)<br> «Оценка при подборе персонала» и «Основы менеджмента:  управление по целям» (Мейнстрим, 2007-2008 год)<br> «Мастерство презентаций и публичных выступлений»,<br> «Управление людьми и мотивация», «Методы активных продаж» (InforManager, 2008 год); <br>«Личная эффективность руководителя», «Обратная связь и мотивация персонала» (Smart Time, 2012-2013 год);<br> «Языковые конструкции при продаже товаров и услуг» (Азимов, 2013 год);<br> «Методы партисипативной фасилитации «(Карпова Н., 2015 год),<br> «Повышение эффективности  отдела продаж» (Афанасьев, 2015 р.);<br> «Стратегия голубых океанов» (2016 г.),<br> «Визуализация в как инструмент повышения личной эффективности» (Приходько, 2017 г.),<br> «Эмоциональный интеллект руководителя» (Н. Романенко, 2017 г.). </div>
         
  </div>
 
@@ -89,19 +90,19 @@
             </div>
     <div onclick='revealInfo2()' onmouseout='hideInfo2()'  id='revealBtn' class='team__members__pics__btn'>Узнать больше</div>
             <div id='overlay2' class='team__members__pics__overlay'> 
-            Образование и пройденное обучение:
-            «Методы визуализации», И. Приходько, 2017
-                    «Клиенты на всю жизнь», Джон Шоул, 2016
-                    «Управление изменениями», Метт Кребтри, 2016
-                    «Управление групповой динамикой. Методы при работе с сопротивлениями, ситуациями, разногласиями», GoldenStaff, 2016
-                    «Управление отделом продаж», В. Касюн, 2016
-                    «ТоР Фасилитация. Методы и приемы», Н. Павлова, 2015
-                    «Спиральная динамика», С. Слипченко, 2015
-                    «HR-стратегии: неформальное обучение», 2015 
-                    «Организация практики в бизнес-тренинге. Подходы и инструменты управления группой», GoldenStaff, 2014
-                    «Уверенный сервис. Экспертность и ассертивность», И. Бубнов, 2013
-                    «Управленческие навыки супервайзеров Контакт-Центра», ApexBerg, 2008
-                    Закончила НАУ по специальности «Психология», 2009  
+            Образование и пройденное обучение:<br>
+            «Методы визуализации», И. Приходько, 2017<br>
+            «Клиенты на всю жизнь», Джон Шоул, 2016<br>
+            «Управление изменениями», Метт Кребтри, 2016<br>
+            «Управление групповой динамикой. Методы при работе с сопротивлениями, ситуациями, разногласиями», GoldenStaff, 2016<br>
+            «Управление отделом продаж», В. Касюн, 2016<br>
+            «ТоР Фасилитация. Методы и приемы», Н. Павлова, 2015<br>
+            «Спиральная динамика», С. Слипченко, 2015<br>
+            «HR-стратегии: неформальное обучение», 2015 <br>
+            «Организация практики в бизнес-тренинге. Подходы и инструменты управления группой», GoldenStaff, 2014<br>
+            «Уверенный сервис. Экспертность и ассертивность», И. Бубнов, 2013<br>
+            «Управленческие навыки супервайзеров Контакт-Центра», ApexBerg, 2008<br>
+            Закончила НАУ по специальности «Психология», 2009  <br>
                
 </div>   
      </div>
@@ -218,9 +219,7 @@
         
 
 <div class='clients-slider'>
-        <div class="mySlides fade">
-           
-                  
+        <div class="mySlides fade">           
         <div class="text">Было очень полезно обсудить в открытую многие вопросы, которые накопились у ребят. Плюс
         было полезно подискутировать в плане реализации некоторых запросов на изменения. Мне
         кажется, что для ребят из опер. блока некоторые вещи были не столь очевидны (возможности,
