@@ -281,7 +281,7 @@ a {
 
 @media all and (min-width: 581px) and (max-width: 766px) and (orientation: landscape) {
   .container-team {
-    height: 180vh;
+    height: 190vh;
   }
 }
 
