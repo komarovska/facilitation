@@ -195,7 +195,7 @@ a {
         font-family: $font_two;
         font-weight: bold;
         @media#{$xs_} {
-            padding-top: 5%;
+            padding-top: 1%;
             font-size: 5rem;
         }
         
@@ -241,7 +241,7 @@ a {
         height: 190vh;
     }
     @media#{$xxs} {
-        height: 190vh;
+        height: 200vh;
     }
     @media#{$xxs_} {
         height: 350vh;
@@ -822,7 +822,7 @@ a {
         height: 140vh;
     }
     @media#{$xxs} {
-        height: 110vh;
+        height: 120vh;
     }
     @media#{$xxs_} {
         height: 150vh;
