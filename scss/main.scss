@@ -415,12 +415,16 @@ a {
                 font-size: 1.9rem;
             }
         &__close {
+            display: none;
             position: absolute;
             right: 25px;
             top: 20px;
             color: #000;
             font-size: 40px;
             font-weight: bold;
+            @media#{$xs}{
+                display: block;
+            }
             &:hover {
                 color: $lightgrey;
                 cursor: pointer;

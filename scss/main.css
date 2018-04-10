@@ -513,12 +513,19 @@ a {
 }
 
 .team__members__pics__overlay__close {
+  display: none;
   position: absolute;
   right: 25px;
   top: 20px;
   color: #000;
   font-size: 40px;
   font-weight: bold;
+}
+
+@media all and (max-width: 766px) {
+  .team__members__pics__overlay__close {
+    display: block;
+  }
 }
 
 .team__members__pics__overlay__close:hover {
