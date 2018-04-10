@@ -512,6 +512,25 @@ a {
   font-size: 1.9rem;
 }
 
+.team__members__pics__overlay__close {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.team__members__pics__overlay__close:hover {
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+.team__members__pics__overlay__close:focus {
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
 .team__members__pics__description {
   height: 15%;
   margin-top: 2%;

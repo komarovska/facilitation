@@ -414,7 +414,24 @@ a {
                 font-weight: bold;
                 font-size: 1.9rem;
             }
+        &__close {
+            position: absolute;
+            right: 25px;
+            top: 20px;
+            color: #000;
+            font-size: 40px;
+            font-weight: bold;
+            &:hover {
+                color: $lightgrey;
+                cursor: pointer;
+            }
+            &:focus {
+                color: $lightgrey;
+                cursor: pointer;
+            }
         }
+        }
+
         &__description {
         height: 15%;
         margin-top: 2%;
