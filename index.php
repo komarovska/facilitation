@@ -34,7 +34,7 @@ $mail ->SMTPSecure = 'ssl';
 $mail -> Host = 'smtp.gmail.com';
 $mail -> Port = '465';
 $mail -> Username = 'thisisjustatestphp@gmail.com';
-$mail -> Password = 'Visha0505vishax';
+$mail -> Password = 'Thisisjustatestphp55';
 $mail -> SetFrom('thisisjustatestphp@gmail.com');
 $mail -> Subject = "Вам пришла заявка!";
 $mail -> Body = $content;
